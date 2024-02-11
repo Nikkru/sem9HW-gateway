@@ -10,12 +10,13 @@ import org.springframework.context.annotation.Bean;
 public class Sem9HwGatewayApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Sem9HwGatewayApplication.class, args);
 	}
 	@Bean
 	public RouteLocator customRoutLocator(RouteLocatorBuilder builder){
 		return builder.routes()
-				.route("Microservice1", r->r.path("/serviceA/**")
+				.route("Microservice1", r->r.path("/products/**")
 						.uri("http://localhost:8081/")).build();
 	}
 
