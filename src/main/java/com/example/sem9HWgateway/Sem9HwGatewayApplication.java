@@ -16,7 +16,7 @@ public class Sem9HwGatewayApplication {
 	@Bean
 	public RouteLocator customRoutLocator(RouteLocatorBuilder builder){
 		return builder.routes()
-				.route("Microservice1", r->r.path("/products/**")
+				.route("MicroserviceProduct", r->r.path("/products/**")
 						.uri("http://localhost:8081/")).build();
 	}
 
